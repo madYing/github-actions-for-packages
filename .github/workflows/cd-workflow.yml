@@ -5,7 +5,7 @@ name: Docker CD
 on:
   push:
     paths:
-      - "**Dockerfile**"
+      - "**Dockerfile**"  # 添加路径过滤，只有push中包含Dockerfile文件时才会run
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -66,4 +66,6 @@ jobs:
           registry: docker.pkg.github.com
           repository: madying/github-actions-for-packages/tic-tac-toe
           tag_with_sha: true
+    
+
     
