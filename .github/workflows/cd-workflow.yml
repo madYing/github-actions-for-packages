@@ -2,7 +2,10 @@
 
 name: Docker CD
 
-on: push
+on:
+  push:
+    paths:
+      - "**Dockerfile**"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -65,4 +68,4 @@ jobs:
           tag_with_sha: true
     
 
-
+    
